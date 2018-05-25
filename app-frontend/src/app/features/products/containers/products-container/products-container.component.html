@@ -1,0 +1,3 @@
+<app-load-indicator [visible]="(loading$ | async)"></app-load-indicator>
+<p>products-container works!</p>
+<p *ngFor="let product of (list$ | async)">{{product.name}}</p>

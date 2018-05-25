@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <span>Users</span>
+  <button mat-icon-button (click)="newUser()">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button mat-icon-button (click)="editUser()">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-icon-button  (click)="deleteUser()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-selection-list>
+  <mat-list-option checkboxPosition="before" *ngFor="let user of (users$ | async)">{{user.name}}</mat-list-option>
+</mat-selection-list>

@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <span>Roles</span>
+  <button mat-icon-button (click)="newRole()">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button mat-icon-button (click)="editRole()">
+    <mat-icon>edit</mat-icon>
+  </button>
+  <button mat-icon-button  (click)="deleteRole()">
+    <mat-icon>delete</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-selection-list>
+  <mat-list-option checkboxPosition="before" *ngFor="let role of (roles$ | async)">{{role.name}}</mat-list-option>
+</mat-selection-list>

@@ -1,0 +1,78 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "nswag": "nswag swagger2tsclient /input:http://localhost:2444/swagger/v1/swagger.json /output:src/app/core/api/swagger.ts /template:angular /httpclass:HttpClient /injectiontokentype:InjectionToken"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^5.2.10",
+    "@angular/cdk": "^5.2.5",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/material": "^5.2.5",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "@ngrx/effects": "^5.2.0",
+    "@ngrx/router-store": "^5.2.0",
+    "@ngrx/store": "^5.2.0",
+    "@ngrx/store-devtools": "^5.2.0",
+    "core-js": "^2.4.1",
+    "normalize.css": "^8.0.0",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@angular/cli": "~1.7.4",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/language-service": "^5.2.0",
+    "@types/jasmine": "~2.8.3",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/jest": "^22.2.3",
+    "@types/node": "~6.0.60",
+    "codelyzer": "^4.0.1",
+    "jasmine-core": "~2.8.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "jest": "^22.4.3",
+    "jest-preset-angular": "^5.2.2",
+    "karma": "~2.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "nswag": "^11.17.4",
+    "protractor": "~5.1.2",
+    "ts-node": "~4.1.0",
+    "tslint": "~5.9.1",
+    "typescript": "~2.5.3"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.conf.ts",
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "@env/(.*)$": "<rootDir>/src/environments/$1",
+      "@root/(.*)$": "<rootDir>/src/app/root//$1",
+      "@core/(.*)$": "<rootDir>/src/app/core/$1",
+      "@shared/(.*)$": "<rootDir>/src/app/shared/$1",
+      "@administration/(.*)$": "<rootDir>/src/app/features/administration/$1",
+      "@dashboard/(.*)$": "<rootDir>/src/app/features/dashboard/$1",
+      "@reports/(.*)$": "<rootDir>/src/app/features/reports/$1"
+    }
+  }
+}

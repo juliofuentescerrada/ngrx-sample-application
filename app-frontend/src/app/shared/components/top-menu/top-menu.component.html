@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a id="dashboard-link" mat-raised-button color="primary" routerLink="/dashboard">DASHBOARD</a>
+    <a id="reports-link" mat-raised-button color="primary" routerLink="/reports">REPORTS</a>
+    <a id="products-link" mat-raised-button color="primary" routerLink="/products">PRODUCTS</a>
+    <a id="administration-link" mat-raised-button color="primary" routerLink="/administration">ADMINISTRATION</a>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">Admin</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-menu #userMenu="matMenu">
+  <button mat-menu-item>Logout</button>
+</mat-menu>
